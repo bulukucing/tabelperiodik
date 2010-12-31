@@ -5,8 +5,10 @@ const randomButton = document.querySelector('.random-button');
 
 const benar = "Benar!";
 const salah = "Salah!";
+
 let jmlhBenar = 0;
 let jmlhSalah = 0;
+
 let nama = '';
 let mulai;
 
@@ -150,9 +152,9 @@ randomButton.addEventListener('click', function() {
             text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
           });
         }
-      })
+      });
     } else {
-      Swal.fire('Oke...');
+      Swal.fire('Oke!');
     }
   });
 });
