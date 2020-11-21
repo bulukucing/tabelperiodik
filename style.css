@@ -1,6 +1,6 @@
 div{
 	background-color: rebeccapurple;
-	border          : 2px solid white;
+	border          : 3px solid #CC99FF;
 	margin          : 20px;
 	padding         : 0px;
 	border-radius   : 15px;
@@ -10,7 +10,7 @@ body{
 	background-color: #123;
 	display         : inline-block;
 	letter-spacing  : 3px;
-	color           : darkgrey;
+	color           : azure;
 	font-family     : arial;
 	font-size       : 30px;
 	text-align      : center;
@@ -19,7 +19,7 @@ body{
 	font-variant    : small-caps;
 }
 button{
-	/*cursor: pointer;*/
+	cursor: pointer;
 }
 .acak{
 	background-color: salmon;
@@ -31,11 +31,8 @@ button{
 	background-color: gold;
 }
 .main{
-	background-color: #eee;
+	background-color: #CCCCFF;
 }
 .gambar{
-	background-color: #eee;
-}
-.content{
-	background-color: #aaa;
+	background-color: azure;
 }
