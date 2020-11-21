@@ -1,16 +1,16 @@
 div{
-	background-color: lightskyblue;
-	border          : 3px solid white;
+	background-color: rebeccapurple;
+	border          : 2px solid white;
 	margin          : 20px;
 	padding         : 0px;
-	border-radius   : 20px;
+	border-radius   : 15px;
 }
 
 body{
 	background-color: #123;
 	display         : inline-block;
 	letter-spacing  : 3px;
-	color           : #eee;
+	color           : darkgrey;
 	font-family     : arial;
 	font-size       : 30px;
 	text-align      : center;
