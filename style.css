@@ -1,0 +1,41 @@
+div{
+	background-color: lightskyblue;
+	border          : 3px solid white;
+	margin          : 20px;
+	padding         : 0px;
+	border-radius   : 20px;
+}
+
+body{
+	background-color: #123;
+	display         : inline-block;
+	letter-spacing  : 3px;
+	color           : #eee;
+	font-family     : arial;
+	font-size       : 30px;
+	text-align      : center;
+	margin          : 60px;
+	padding         : 10px;
+	font-variant    : small-caps;
+}
+button{
+	/*cursor: pointer;*/
+}
+.acak{
+	background-color: salmon;
+}
+.pertama{
+	background-color: limegreen;
+}
+.kedua{
+	background-color: gold;
+}
+.main{
+	background-color: #eee;
+}
+.gambar{
+	background-color: #eee;
+}
+.content{
+	background-color: #aaa;
+}
