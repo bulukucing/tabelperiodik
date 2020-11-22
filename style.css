@@ -1,9 +1,9 @@
 div{
 	background-color: lightskyblue;
-	border          : 2px solid azure;
+	border          : 3px solid azure;
 	margin          : 20px;
 	padding         : 0px;
-	border-radius   : 15px;
+	border-radius   : 12px;
 }
 
 body{
@@ -31,7 +31,7 @@ button{
 	background-color: gold;
 }
 .main{
-	background-color: #CCCCFF;
+	background-color: lightblue;
 }
 .gambar{
 	background-color: azure;
