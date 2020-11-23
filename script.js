@@ -1,20 +1,35 @@
 // ambil element DOM
+const tombolA = document.querySelectorAll('.tombolA');
+const tombolB = document.querySelectorAll('.tombolB');
 const sapa = document.querySelector('.sapa');
 const randomButton = document.querySelector('.random-button');
 
-// mesin 
+let nama = '';
 const benar = "Benar!";
 const salah = "Salah!";
 let jmlhBenar = 0, jmlhSalah = 0
 let mulai;
 
-// tabel periodik I - VIII.A
 // Sapa User
-let nama = prompt("masukan nama anda: ");
-if(nama == null || nama == ""){
-	nama = "Player";
-}
-sapa.innerHTML = `Halo ${nama}, Selamat Datang!`;
+Swal.fire({
+  title: 'Submit your name',
+  input: 'text',
+  showCancelButton: true,
+  confirmButtonText: 'Sure'
+}).then((result) => {
+  if (result.isConfirmed) {
+  	if(result.value == null || result.value == '' ) {
+  		sapa.innerHTML = 'Halo Player, Selamat Datang!';
+  		nama = 'Player';
+  	}else{
+		sapa.innerHTML = `Halo ${result.value}, Selamat Datang!`;
+		nama = result.value;
+  	}
+  } else if(result.isDismissed) {
+  		sapa.innerHTML = '';
+  		nama = 'Player';
+  }
+});
 
 // jawaban / soal
 const nomorAtom = [
@@ -95,8 +110,6 @@ const semuaJawaban = [...jawaban[0], ...jawaban[1]];
 const semuaSimbol = [...simbol[0], ...simbol[1]];
 const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
 
-
-
 // mesin untuk menjalankan soal
 const tekan = function(nomor, jawabanI, i) {
 	mulai = confirm(`Mulai Test Ke-${nomor}`);
@@ -119,6 +132,7 @@ const tekan = function(nomor, jawabanI, i) {
 	}
 }
 
+
 // tombol acak
 randomButton.addEventListener('click', function(){
 	mulai = confirm('Mulai tes acak!');
@@ -140,16 +154,15 @@ randomButton.addEventListener('click', function(){
 });
 
 // tombol A
-const tombolA = document.querySelectorAll('.tombolA');
 tombolA.forEach(function(tom, i){
 	tom.addEventListener('click', function(){
 		tekan(i+1, 0, i)
 	});
 });
+
 // tombol B
-const tombolB = document.querySelectorAll('.tombolB');
 tombolB.forEach(function(tom, i){
 	tom.addEventListener('click', function(){
 		tekan(i+1, 1, i)
 	});
-});	
+});
