@@ -4,32 +4,18 @@ const tombolB = document.querySelectorAll('.tombolB');
 const sapa = document.querySelector('.sapa');
 const randomButton = document.querySelector('.random-button');
 
-let nama = '';
 const benar = "Benar!";
 const salah = "Salah!";
 let jmlhBenar = 0, jmlhSalah = 0
 let mulai;
 
 // Sapa User
-Swal.fire({
-  title: 'Submit your name',
-  input: 'text',
-  showCancelButton: true,
-  confirmButtonText: 'Sure'
-}).then((result) => {
-  if (result.isConfirmed) {
-  	if(result.value == null || result.value == '' ) {
-  		sapa.innerHTML = 'Halo Player, Selamat Datang!';
-  		nama = 'Player';
-  	}else{
-		sapa.innerHTML = `Halo ${result.value}, Selamat Datang!`;
-		nama = result.value;
-  	}
-  } else if(result.isDismissed) {
-  		sapa.innerHTML = '';
-  		nama = 'Player';
-  }
-});
+let nama = prompt('masukan nama anda : ');
+if(nama == null || nama == '') {
+	nama = 'Player';
+}
+
+sapa.innerHTML = `Halo ${nama}, Selamat Datang!`;
 
 // jawaban / soal
 const nomorAtom = [
