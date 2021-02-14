@@ -6,5 +6,6 @@
 body{
   background-color: salmon; 
   font-family: arial;
-  line-spacing: 2px;
+  text-align:center;
+  color: #fff;
 }
