@@ -1,7 +1,7 @@
 // ambil element DOM
+const welcome = document.getElementById('welcome');
 const tombolA = document.querySelectorAll('.tombolA');
 const tombolB = document.querySelectorAll('.tombolB');
-const welcome = document.querySelector('#welcome');
 const randomButton = document.querySelector('.random-button');
 
 const benar = "Benar!",
@@ -22,12 +22,9 @@ Swal.fire({
     }
   }
 }).then((result) => {
-  console.log(result)
   if (result.isConfirmed) {
-    if(!result.value == null || !result.value == '') {
-      Swal.fire(`${result.value}!`);
-      welcome.innerText = `selamat datang ${result.value}!`;
-    }
+    Swal.fire(`Halo ${result.value}!`);
+    welcome.innerText = `selamat datang ${result.value}!`; 
   }
 
   else if (result.isDismissed) {
