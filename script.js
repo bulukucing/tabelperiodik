@@ -23,8 +23,8 @@ Swal.fire({
   }
 }).then((result) => {
   if (result.isConfirmed) {
-    Swal.fire(`Halo ${result.value}!`);
-    welcome.innerText = `selamat datang ${result.value}!`; 
+    Swal.fire(`Halo ${result.value}`);
+    welcome.innerText = `selamat datang ${result.value}`;
   }
 
   else if (result.isDismissed) {
