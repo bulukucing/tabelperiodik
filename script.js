@@ -18,7 +18,7 @@ Swal.fire({
   showCancelButton: true,
   inputValidator: (value) => {
     if (!value) {
-      return 'You need to write something!'
+      return 'You need to write something!';
     }
   }
 }).then((result) => {
@@ -122,7 +122,7 @@ const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
 const tekan = function(num, jawabanI, i) {
   mulai = confirm(`Mulai Test Ke-${num}`);
   while(mulai) {
-    alert(`Halo ${nama}! ayo menghafal tabel periodik! \n*Jawab pertanyaannya dengan nama latin!*`);
+    alert(`Halo Player! ayo menghafal tabel periodik! \n*Jawab pertanyaannya dengan nama latin!*`);
     jmlhBenar = 0;
     jmlhSalah = 0;
     for(let j = 0; j < jawaban[jawabanI][i].length; j++) {
