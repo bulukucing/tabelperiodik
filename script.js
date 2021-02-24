@@ -8,7 +8,8 @@ const benar = "Benar!",
       salah = "Salah!";
 let jmlhBenar = 0,
     jmlhSalah = 0;
-let mulai;
+let nama = '',
+    mulai;
 
 // Sapa User
 
@@ -25,12 +26,14 @@ Swal.fire({
   if (result.isConfirmed) {
     Swal.fire(`Halo ${result.value}`);
     welcome.innerText = `selamat datang ${result.value}`;
+    nama = result.value;
   }
 
   else if (result.isDismissed) {
-    welcome.innerText = 'selamat datang player!';
+    nama = 'Player';
+    welcome.innerText = `Selamat Datang ${nama}`;
   }
-})
+});
 
 // jawaban / soal
 const nomorAtom = [
@@ -122,7 +125,7 @@ const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
 const tekan = function(num, jawabanI, i) {
   mulai = confirm(`Mulai Test Ke-${num}`);
   while(mulai) {
-    alert(`Halo Player! ayo menghafal tabel periodik! \n*Jawab pertanyaannya dengan nama latin!*`);
+    alert(`Halo ${nama}! ayo menghafal tabel periodik! \n*Jawab pertanyaannya dengan nama latin!*`);
     jmlhBenar = 0;
     jmlhSalah = 0;
     for(let j = 0; j < jawaban[jawabanI][i].length; j++) {
@@ -160,9 +163,9 @@ randomButton.addEventListener('click', function() {
       alert(`${salah}\nJawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`);
       jmlhSalah++;
     }
-    alert(`kamu telah menyelesaikan ${jmlhBenar+jmlhSalah} soal acak\nbenar:${jmlhBenar}\nsalah:${jmlhSalah}`);
     mulai = confirm(`Lanjut ?`);
-    }
+  }
+  alert(`kamu telah menyelesaikan ${jmlhBenar+jmlhSalah} soal acak\nbenar:${jmlhBenar}\nsalah:${jmlhSalah}`);
 });
 
 // tombol A
