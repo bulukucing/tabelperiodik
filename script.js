@@ -148,24 +148,43 @@ const tekan = function(num, jawabanI, i) {
 
 // tombol acak
 randomButton.addEventListener('click', function() {
-  mulai = confirm('Mulai tes acak!');
-  jmlhBenar = 0, jmlhSalah = 0;
-  while(mulai) {
-    let random1 = Math.floor( Math.random() * semuaJawaban.length );
-    let random2 = Math.floor( Math.random() * semuaJawaban[random1].length );
-    let tes = prompt(`${semuaSimbol[random1][random2]} dengan nomor Atom ${semuaNomorAtom[random1][random2]}`);
-    if(tes == semuaJawaban[random1][random2]) {
-      alert(`${benar}\nJawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`);
-      jmlhBenar++;
+  Swal.fire({
+    title: 'mulai',
+    showCancelButton: true
+  }).then(result => {
+    if(result.isConfirmed){
+      jmlhBenar = 0;
+      jmlhSalah = 0;
+      let random1 = Math.floor( Math.random() * semuaJawaban.length );
+      let random2 = Math.floor( Math.random() * semuaJawaban[random1].length );
+      Swal.fire({
+	title: `${semuaSimbol[random1][random2]} dengan nomor Atom ${semuaNomorAtom[random1][random2]}`,
+	input: 'text',
+	showCancelButton: true,
+	inputValidator: (value) => {
+	  if (!value) {
+	    return 'You need to write something!';
+	  }
+	}
+      }).then(result => {
+	if(result.value === semuaJawaban[random1][random2]) {
+	  jmlhBenar++;
+	  Swal.fire({
+	    title: 'Benar !',
+	    text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
+	  });
+	} else {
+	  jmlhSalah++;
+	  Swal.fire({
+	    title: 'Salah !',
+	    text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"` 
+	  });
+	}
+      })
+    } else {
+      Swal.fire('Oke...');
     }
-    
-    else {
-      alert(`${salah}\nJawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`);
-      jmlhSalah++;
-    }
-    mulai = confirm(`Lanjut ?`);
-  }
-  alert(`kamu telah menyelesaikan ${jmlhBenar+jmlhSalah} soal acak\nbenar:${jmlhBenar}\nsalah:${jmlhSalah}`);
+  });
 });
 
 // tombol A
