@@ -23,9 +23,26 @@ h1 {
   font-size: 38px;
 }
 
-h3 {
+h2 {
   font-size: 28px;
+}
 
+h3 {
+    font-size: 18px;
+}
+
+div.resources {
+    background-color: black;
+    background-color: #2e3440;
+    border: 1px solid #5E81AC;
+    margin: 30px;
+    padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .tombolA, .tombolB, .random-button {
