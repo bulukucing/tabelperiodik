@@ -7,5 +7,5 @@ link : https://bulukucing.github.io/tabelperiodik
 *** tabel periodik latin
 https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements
 *** wikipedia
-https://github.com/bulukucing/tabelperiodik.git
+https://en.wikipedia.org/wiki/Periodic_table
    
