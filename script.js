@@ -61,17 +61,17 @@ const nomorAtom = [
   ]
 ];
 const simbol = [
-    [
-      // 1 - 8 A
-      ['H', 'Li', 'Na', 'K', 'Rb', 'Cs', 'Fr'],
-      ['Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra'],
-      ['B', 'Al', 'Ga', 'In', 'Tl', 'Nh'],
-      ['C', 'Si', 'Ge', 'Sn', 'Pb', 'Fl'],
-      ['N', 'P', 'As', 'Sb', 'Bi', 'Mc'],
-      ['O', 'S', 'Se', 'Te', 'Po', 'Lv'],
-      ['F', 'Cl', 'Br', 'I', 'At', 'Ts'],
-      ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'Og']
-    ],
+  [
+    // 1 - 8 A
+    ['H', 'Li', 'Na', 'K', 'Rb', 'Cs', 'Fr'],
+    ['Be', 'Mg', 'Ca', 'Sr', 'Ba', 'Ra'],
+    ['B', 'Al', 'Ga', 'In', 'Tl', 'Nh'],
+    ['C', 'Si', 'Ge', 'Sn', 'Pb', 'Fl'],
+    ['N', 'P', 'As', 'Sb', 'Bi', 'Mc'],
+    ['O', 'S', 'Se', 'Te', 'Po', 'Lv'],
+    ['F', 'Cl', 'Br', 'I', 'At', 'Ts'],
+    ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'Og']
+  ],
   [
     // 1 - 8 B
     ['Cu','Ag', 'Au', 'Rg'],
@@ -132,15 +132,15 @@ const tekan = function(num, jawabanI, i) {
       jmlhBenar = 0;
       jmlhSalah = 0;
       for(let j = 0; j < jawaban[jawabanI][i].length; j++) {
-  let tes = prompt(`${j+1}. ${simbol[jawabanI][i][j]} dengan Nomor Atom ${nomorAtom[jawabanI][i][j]}`);
-  if(tes == `${jawaban[jawabanI][i][j]}`) {
-    alert(`${benar}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
-    jmlhBenar++;
-  }
-  else {
-    alert(`${salah}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
-    jmlhSalah++;
-  }
+        let tes = prompt(`${j+1}. ${simbol[jawabanI][i][j]} dengan Nomor Atom ${nomorAtom[jawabanI][i][j]}`);
+        if(tes == `${jawaban[jawabanI][i][j]}`) {
+          alert(`${benar}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
+          jmlhBenar++;
+        }
+        else {
+          alert(`${salah}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
+          jmlhSalah++;
+        }
       }
       alert(`Test ${num} dengan JUMLAH SOAL : ${jmlhBenar+jmlhSalah}!\nBenar: ${ jmlhBenar},\nSalah : ${jmlhSalah}.`);
     } else {
@@ -161,28 +161,28 @@ randomButton.addEventListener('click', function() {
       let random1 = Math.floor( Math.random() * semuaJawaban.length );
       let random2 = Math.floor( Math.random() * semuaJawaban[random1].length );
       Swal.fire({
-  title: `${semuaSimbol[random1][random2]} dengan nomor Atom ${semuaNomorAtom[random1][random2]}`,
-  input: 'text',
-  showCancelButton: true,
-  inputValidator: (value) => {
-    if (!value) {
-      return 'You need to write something!';
-    }
-  }
+        title: `${semuaSimbol[random1][random2]} dengan nomor Atom ${semuaNomorAtom[random1][random2]}`,
+        input: 'text',
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return 'You need to write something!';
+          }
+        }
       }).then(result => {
-  if(result.value === semuaJawaban[random1][random2]) {
-    jmlhBenar++;
-    Swal.fire({
-      title: 'Benar !',
-      text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
-    });
-  } else {
-    jmlhSalah++;
-    Swal.fire({
-      title: 'Salah !',
-      text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
-    });
-  }
+        if(result.value === semuaJawaban[random1][random2]) {
+          jmlhBenar++;
+          Swal.fire({
+            title: 'Benar !',
+            text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
+          });
+        } else {
+          jmlhSalah++;
+          Swal.fire({
+            title: 'Salah !',
+            text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
+          });
+        }
       })
     } else {
       Swal.fire('Oke...');
