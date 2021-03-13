@@ -116,7 +116,7 @@ const semuaJawaban = [...jawaban[0], ...jawaban[1]];
 const semuaSimbol = [...simbol[0], ...simbol[1]];
 const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
 
-// tombol acak
+// random button
 randomButton.addEventListener('click', function() {
   Swal.fire({
     title: 'mulai',
