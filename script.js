@@ -1,4 +1,3 @@
-// ambil element DOM
 const welcome = document.getElementById('welcome');
 const tombolA = document.querySelectorAll('.tombolA');
 const tombolB = document.querySelectorAll('.tombolB');
@@ -10,8 +9,6 @@ let jmlhBenar = 0;
 let jmlhSalah = 0;
 let nama = '';
 let mulai;
-
-// Sapa User
 
 Swal.fire({
   title: 'Masukan nama anda',
@@ -35,7 +32,6 @@ Swal.fire({
   }
 });
 
-// jawaban / soal
 const nomorAtom = [
   [
     // 1 - 8 A
@@ -116,38 +112,9 @@ const jawaban = [
   ]
 ];
 
-// semua soal & jawaban
 const semuaJawaban = [...jawaban[0], ...jawaban[1]];
 const semuaSimbol = [...simbol[0], ...simbol[1]];
 const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
-
-// mesin untuk menjalankan soal
-const tekan = function(num, jawabanI, i) {
-  Swal.fire({
-    title: `Mulai Test Ke-${num}`,
-    showCancelButton: true
-  }).then(result => {
-    if(result.isConfirmed) {
-      alert(`Halo ${nama}! ayo menghafal tabel periodik! \n*Jawab pertanyaannya dengan nama latin!*`);
-      jmlhBenar = 0;
-      jmlhSalah = 0;
-      for(let j = 0; j < jawaban[jawabanI][i].length; j++) {
-        let tes = prompt(`${j+1}. ${simbol[jawabanI][i][j]} dengan Nomor Atom ${nomorAtom[jawabanI][i][j]}`);
-        if(tes == `${jawaban[jawabanI][i][j]}`) {
-          alert(`${benar}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
-          jmlhBenar++;
-        }
-        else {
-          alert(`${salah}\nJawabannya adalah : ${jawaban[jawabanI][i][j]} dengan simbol "${simbol[jawabanI][i][j]}" dan nomor atom "${nomorAtom[jawabanI][i][j]}"`);
-          jmlhSalah++;
-        }
-      }
-      alert(`Test ${num} dengan JUMLAH SOAL : ${jmlhBenar+jmlhSalah}!\nBenar: ${ jmlhBenar},\nSalah : ${jmlhSalah}.`);
-    } else {
-      Swal.fire('OK!');
-    }
-  });
-}
 
 // tombol acak
 randomButton.addEventListener('click', function() {
@@ -187,19 +154,5 @@ randomButton.addEventListener('click', function() {
     } else {
       Swal.fire('Oke...');
     }
-  });
-});
-
-// tombol A
-tombolA.forEach(function(tom, i) {
-  tom.addEventListener('click', function() {
-    tekan(i+1, 0, i);
-  });
-});
-
-// tombol B
-tombolB.forEach(function(tom, i) {
-  tom.addEventListener('click', function() {
-    tekan(i+1, 1, i);
   });
 });
