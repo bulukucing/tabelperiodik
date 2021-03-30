@@ -10,19 +10,8 @@ body {
 	text-align: center;
 }
 
-.periodic-table, .resources {
+#welcome, .periodic-table, .resources {
 	text-transform: capitalize;
-}
-
-.welcome {
-	font-size: 35px;
-}
-
-.periodic-table {
-	font-size: 30px;
-}
-
-.resources {
 	font-size: 25px;
 }
 
