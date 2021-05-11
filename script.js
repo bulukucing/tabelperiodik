@@ -1,17 +1,10 @@
+// get DOM elements
 const welcome = document.getElementById('welcome');
 const tombolA = document.querySelectorAll('.tombolA');
 const tombolB = document.querySelectorAll('.tombolB');
 const randomButton = document.querySelector('.random-button');
 
-const benar = "Benar!";
-const salah = "Salah!";
-
-let jmlhBenar = 0;
-let jmlhSalah = 0;
-
-let nama = '';
-let mulai;
-
+// get user name and display it
 Swal.fire({
   title: 'Masukan nama anda',
   input: 'text',
@@ -24,16 +17,15 @@ Swal.fire({
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire(`Halo ${result.value}`);
-    welcome.innerText = `selamat datang ${result.value}`;
-    nama = result.value;
+    welcome.innerText = `Selamat Datang ${result.value}!`;
   }
 
   else if (result.isDismissed) {
-    nama = 'Player';
-    welcome.innerText = `Selamat Datang ${nama}`;
+    welcome.innerText = 'Selamat Datang Player!';
   }
 });
 
+// periodic table data
 const nomorAtom = [
   [
     // 1 - 8 A
@@ -114,6 +106,7 @@ const jawaban = [
   ]
 ];
 
+// all of periodik table data
 const semuaJawaban = [...jawaban[0], ...jawaban[1]];
 const semuaSimbol = [...simbol[0], ...simbol[1]];
 const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
@@ -125,8 +118,8 @@ randomButton.addEventListener('click', function() {
     showCancelButton: true
   }).then(result => {
     if(result.isConfirmed){
-      jmlhBenar = 0;
-      jmlhSalah = 0;
+      let jmlhBenar = 0;
+      let jmlhSalah = 0;
       let random1 = Math.floor( Math.random() * semuaJawaban.length );
       let random2 = Math.floor( Math.random() * semuaJawaban[random1].length );
       Swal.fire({
@@ -140,13 +133,11 @@ randomButton.addEventListener('click', function() {
         }
       }).then(result => {
         if(result.value === semuaJawaban[random1][random2]) {
-          jmlhBenar++;
           Swal.fire({
             title: 'Benar !',
             text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
           });
         } else {
-          jmlhSalah++;
           Swal.fire({
             title: 'Salah !',
             text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
