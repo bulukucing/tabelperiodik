@@ -7,6 +7,7 @@ const randomButton = document.querySelector('.random-button');
 // get user name and display it
 Swal.fire({
   title: 'Masukan nama anda',
+  icon: 'question',
   input: 'text',
   showCancelButton: true,
   inputValidator: (value) => {
@@ -16,7 +17,10 @@ Swal.fire({
   }
 }).then((result) => {
   if (result.isConfirmed) {
-    Swal.fire(`Halo ${result.value}`);
+    Swal.fire({
+      title:`Halo ${result.value}`,
+      icon: 'success'
+    });
     welcome.innerText = `Selamat Datang ${result.value}!`;
   } else if (result.isDismissed) {
     welcome.innerText = 'Selamat Datang Player!';
@@ -114,6 +118,7 @@ const semuaNomorAtom = [...nomorAtom[0], ...nomorAtom[1]];
 randomButton.addEventListener('click', function() {
   Swal.fire({
     title: 'mulai',
+    icon: 'warning',
     showCancelButton: true
   }).then(result => {
     if(result.isConfirmed){
@@ -123,6 +128,7 @@ randomButton.addEventListener('click', function() {
       let random2 = Math.floor( Math.random() * semuaJawaban[random1].length );
       Swal.fire({
         title: `${semuaSimbol[random1][random2]} dengan nomor Atom ${semuaNomorAtom[random1][random2]}`,
+        icon: 'question',
         input: 'text',
         showCancelButton: true,
         inputValidator: (value) => {
@@ -134,11 +140,13 @@ randomButton.addEventListener('click', function() {
         if(result.value === semuaJawaban[random1][random2]) {
           Swal.fire({
             title: 'Benar !',
+            icon: 'success',
             text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
           });
         } else {
           Swal.fire({
             title: 'Salah !',
+            icon: 'error',
             text: `Jawabannya adalah ${semuaJawaban[random1][random2]} dengan simbol "${semuaSimbol[random1][random2]}" dan nomor atom "${semuaNomorAtom[random1][random2]}"`
           });
         }
