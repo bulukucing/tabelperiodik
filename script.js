@@ -2,7 +2,7 @@
 const welcome = document.querySelector('.welcome');
 const randomButton = document.querySelector('.random-button');
 
-// // get user name and display it
+// get user name and display it
 Swal.fire({
   title: 'Masukan nama anda',
   icon: 'question',
