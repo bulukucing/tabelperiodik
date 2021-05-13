@@ -1,8 +1,6 @@
 // get DOM elements
 const welcome = document.querySelector('.welcome');
 const randomButton = document.querySelector('.random-button');
-// const tombolA = document.querySelectorAll('.tombolA');
-// const tombolB = document.querySelectorAll('.tombolB');
 
 // // get user name and display it
 Swal.fire({
