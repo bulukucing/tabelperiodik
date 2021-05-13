@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./style.css">
     <title>Permainan Tabel Periodik</title>
   </head>
   <body>
@@ -14,18 +16,25 @@
   <div class="container">
     <div class="header">
       <figure class="text-center">
-        <h1><b>Permainan Tabel Periodik!</b></h1>
-        <h2 class="welcome"></h2>
+        <h1 class="title">Permainan Tabel Periodik!</h1>
+        <h3 class="welcome"></h3>
       </figure>
     </div>
     <div class="main">
       <div class="periodic-table-random">
         <figure class="text-center">
-          <h2>Tabel Periodik - Random</h2>
+          <h2 class="title">Tabel Periodik - Random</h2>
           <button type="button" class="random-button btn btn-primary">Mulai</button>
-        </figure>  
+        </figure>
       </div>
     </div>
+    <div class="reference">
+      <figure class="text-center">
+        <h3 class="title">Referensi Bacaan</h3>
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Periodic_table" class="btn btn-primary">Wikipedia</a>
+        <a target="_blank" href="https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements" class="btn btn-primary">Periodic Table Latin</a>
+      </figure>
+    </div>                
   </div>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
