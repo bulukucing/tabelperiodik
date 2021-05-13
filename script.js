@@ -1,10 +1,10 @@
 // get DOM elements
-const welcome = document.getElementById('welcome');
-const tombolA = document.querySelectorAll('.tombolA');
-const tombolB = document.querySelectorAll('.tombolB');
+const welcome = document.querySelector('.welcome');
 const randomButton = document.querySelector('.random-button');
+// const tombolA = document.querySelectorAll('.tombolA');
+// const tombolB = document.querySelectorAll('.tombolB');
 
-// get user name and display it
+// // get user name and display it
 Swal.fire({
   title: 'Masukan nama anda',
   icon: 'question',
@@ -21,9 +21,9 @@ Swal.fire({
       title:`Halo ${result.value}`,
       icon: 'success'
     });
-    welcome.innerText = `Selamat Datang ${result.value}!`;
+    welcome.innerHTML = `Selamat Datang ${result.value}!`;
   } else if (result.isDismissed) {
-    welcome.innerText = 'Selamat Datang Player!';
+    welcome.innerHTML = 'Selamat Datang Player!';
   }
 });
 
