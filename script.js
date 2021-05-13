@@ -18,9 +18,7 @@ Swal.fire({
   if (result.isConfirmed) {
     Swal.fire(`Halo ${result.value}`);
     welcome.innerText = `Selamat Datang ${result.value}!`;
-  }
-
-  else if (result.isDismissed) {
+  } else if (result.isDismissed) {
     welcome.innerText = 'Selamat Datang Player!';
   }
 });
@@ -50,6 +48,7 @@ const nomorAtom = [
     [26, 27, 28, 44, 45, 46, 76, 77, 78, 108, 109]
   ]
 ];
+
 const simbol = [
   [
     // 1 - 8 A
