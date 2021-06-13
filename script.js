@@ -19,9 +19,9 @@ Swal.fire({
       title:`Halo ${result.value}`,
       icon: 'success'
     });
-    welcome.innerHTML = `Selamat Datang ${result.value}!`;
+    welcome.innerHTML = `Selamat Datang ${result.value}`;
   } else if (result.isDismissed) {
-    welcome.innerHTML = 'Selamat Datang Player!';
+    welcome.innerHTML = 'Selamat Datang Player';
   }
 });
 

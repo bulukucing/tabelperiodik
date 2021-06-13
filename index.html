@@ -4,18 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Permainan Tabel Periodik</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: arial;      
+      }
+      .container {
+        text-align: center;
+      }
+ 
+      .heading, .instruction, .main, .reference {
+        margin: 30px auto;
+      }
+
+      .random-button {
+        padding: 5px;
+      }
+
+    </style>
   </head>
     
-    <h1 class="welcome"></h1>
+<div class="container">
+  <div class="heading">
     <h1>Permainan Tabel Periodik!</h1>
+    <h2 class="welcome"></h2>
+  </div>
+  <div class="instruction">
     <h2>Instruksi</h2>
     <p>Jawablah soal yang diberikan dengan jawaban latin dari element tabel periodik tersebut.</p>
+  </div>
+  <div class="main">
     <h3>Tabel Periodik - Random</h3>
     <button type="button" class="random-button">Mulai</button>
+  </div>
+  <div class="reference">
     <h3>Referensi Bacaan</h3>
     <a target="_blank" href="https://en.wikipedia.org/wiki/Periodic_table">Wikipedia</a>
     <br>
     <a target="_blank" href="https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements">Periodic Table Latin</a>
+  </div>
+</div>    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
   
