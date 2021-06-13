@@ -1,61 +1,35 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <!-- SweetAlert2 Theme -->
-    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <title>Permainan Tabel Periodik</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body class="text-white">
 
-  <div class="container">
-    <div class="header bg-primary border border-2" style="margin: 20px auto; padding: 30px;">
-      <figure class="text-center">
-        <h1 class="fw-bold">Permainan Tabel Periodik!</h1>
-        <h3 class="welcome"></h3>
-      </figure>
-    </div>
-    <div class="main">
-      <div class="instruction bg-primary border border-2" style="margin: 20px auto; padding: 20px;">
-        <figure class="text-center">
-          <h2 class="fw-bold">Instruksi</h2>
-          <p>Jawablah soal yang diberikan dengan jawaban latin dari element tabel periodik tersebut.</p>
-        </figure>
-      </div>
-      <div class="periodic-table-random bg-primary border" style="margin: 20px auto; padding: 20px;">
-        <figure class="text-center">
-          <h3 class="fw-bold">Tabel Periodik - Random</h3>
-          <button type="button" class="random-button btn btn-outline-info">Mulai</button>
-        </figure>
-      </div>
-    </div>
-    <div class="reference bg-primary border border-2" style="margin: 20px auto; padding: 20px;">
-      <figure class="text-center">
-        <h3 class="fw-bold">Referensi Bacaan</h3>
-        <div class="d-grid gap-2">
-        <a target="_blank" href="https://en.wikipedia.org/wiki/Periodic_table" class="btn btn-outline-info btn-sm">Wikipedia</a>
-        <a target="_blank" href="https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements" class="btn btn-outline-info btn-sm">Periodic Table Latin</a>
-        </div>
-      </figure>
-    </div>                
+<div class="container">  
+  <div class="header">
+    <h1 class="welcome"></h1>
+    <h1>Permainan Tabel Periodik!</h1>
   </div>
+  <div class="instruction">
+    <h2>Instruksi</h2>
+    <p>Jawablah soal yang diberikan dengan jawaban latin dari element tabel periodik tersebut.</p>
+  </div>
+  <div class="main">
+    <h3>Tabel Periodik - Random</h3>
+    <button type="button" class="random-button">Mulai</button>
+  </div> 
+  <div class="reference">
+    <h3>Referensi Bacaan</h3>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Periodic_table">Wikipedia</a>
+    <br>
+    <a target="_blank" href="https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements">Periodic Table Latin</a>
+  </div>
+</div>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
+  
   </body>
 </html>
