@@ -1,12 +1,6 @@
-# tabelperiodik
-permainan untuk menghafal tabel periodik
+# Permainan Tabel Periodik
+https://bulukucing.github.io/tabelperiodik
 
-link : https://bulukucing.github.io/tabelperiodik
-
-## sumber bacaan
-
-### tabel periodik latin
-https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements
-
-### wikipedia
-https://en.wikipedia.org/wiki/Periodic_table
+## Sumber Bacaan
+[Wikipedia](https://en.wikipedia.org/wiki/Periodic_table)
+[Tabel Periodik Latin](https://periodictableofelements.fandom.com/wiki/Latin_Names_of_Elements)

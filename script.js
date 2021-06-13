@@ -67,9 +67,7 @@ const simbol = [
     // 1 - 8 B
     ['Cu','Ag', 'Au', 'Rg'],
     ['Zn', 'Cd', 'Hg', 'Cn'],
-    ['Sc', 'Y', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb',
-     'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Ac', 'Np', 'Pu', 'Am', 'Cm',
-     'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf'],
+    ['Sc', 'Y', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Ac', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es','Fm', 'Md', 'No', 'Lr', 'Rf'],
     ['Ti', 'Zr', 'Hf', 'Th'],
     ['V', 'Nb', 'Ta', 'Pa', 'Db'],
     ['Cr', 'Mo', 'W', 'U', 'Sg'],
